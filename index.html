@@ -4,6 +4,18 @@
 </head>
 <body>
   <script>
+    window.console = window.console || {};
+
+    console.results = [];
+
+    console.log = function(obj){
+      if (obj && (obj.pass || obj.fail || obj.total)) {
+        console.results.push(obj);
+      }
+    };
+  </script>
+
+  <script>
     console.log({ total: 5 });
 
     setTimeout(function(){
