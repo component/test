@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script>
+    console.log({ total: 5 });
+
+    setTimeout(function(){
+      console.log({ pass: 'Test one' });
+      console.log({ pass: 'Test two' });
+      console.log({ pass: 'Test three' });
+      console.log({ fail: 'Test four', error: 'Some error string here' });
+    }, 500);
+
+    setTimeout(function(){
+      console.log({ pass: 'Test five' });
+    }, 1500);
+  </script>
+</body>
+</html>
