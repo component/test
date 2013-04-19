@@ -6,11 +6,11 @@
   <script>
     window.console = window.console || {};
 
-    console.mochaResults = [];
+    console.results = [];
 
     console.log = function(obj){
       if (obj && (obj.pass || obj.fail || obj.total)) {
-        console.mochaResults.push(obj);
+        console.results.push(obj);
       }
     };
   </script>
@@ -27,6 +27,10 @@
 
     setTimeout(function(){
       console.log({ pass: 'Test five' });
+    }, 5000);
+
+    setTimeout(function(){
+      window.mochaResults = console.results;
     }, 5000);
   </script>
 </body>
