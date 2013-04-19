@@ -6,11 +6,11 @@
   <script>
     window.console = window.console || {};
 
-    console.results = [];
+    console.mochaResults = [];
 
     console.log = function(obj){
       if (obj && (obj.pass || obj.fail || obj.total)) {
-        console.results.push(obj);
+        console.mochaResults.push(obj);
       }
     };
   </script>
