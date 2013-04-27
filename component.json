@@ -1,6 +1,6 @@
 {
   "name": "test",
   "dependencies": {
-    "solid/client": "*"
+    "solid/solid-client": "*"
   }
 }

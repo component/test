@@ -3,35 +3,16 @@
   <title></title>
 </head>
 <body>
+  <script src="build/build.js"></script>
   <script>
-    window.console = window.console || {};
+    var Solid = require('solid-client');
+    var solid = new Solid({ total: 10 });
 
-    console.results = [];
-
-    console.log = function(obj){
-      if (obj && (obj.pass || obj.fail || obj.total)) {
-        console.results.push(obj);
-      }
-    };
-  </script>
-
-  <script>
-    console.log({ total: 5 });
-
-    setTimeout(function(){
-      console.log({ pass: 'Test one' });
-      console.log({ pass: 'Test two' });
-      console.log({ pass: 'Test three' });
-      console.log({ fail: 'Test four', error: 'Some error string here' });
-    }, 500);
-
-    setTimeout(function(){
-      console.log({ pass: 'Test five' });
-    }, 5000);
-
-    setTimeout(function(){
-      window.mochaResults = console.results;
-    }, 5000);
+    var n = 0;
+    setInterval(function(){
+      ++n;
+      solid.pass({ title: 'Something ' + n });
+    }, 150);
   </script>
 </body>
 </html>

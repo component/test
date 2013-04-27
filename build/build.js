@@ -199,7 +199,7 @@ require.relative = function(parent) {
 
   return localRequire;
 };
-require.register("solid-client/index.js", function(exports, require, module){
+require.register("solid-solid-client/index.js", function(exports, require, module){
 
 /**
  * Expose `Solid`.
@@ -263,8 +263,8 @@ Solid.prototype.fail = function(test){
 };
 
 });
-require.alias("solid-client/index.js", "test/deps/client/index.js");
-require.alias("solid-client/index.js", "test/deps/client/index.js");
-require.alias("solid-client/index.js", "client/index.js");
-require.alias("solid-client/index.js", "solid-client/index.js");
+require.alias("solid-solid-client/index.js", "test/deps/solid-client/index.js");
+require.alias("solid-solid-client/index.js", "test/deps/solid-client/index.js");
+require.alias("solid-solid-client/index.js", "solid-client/index.js");
+require.alias("solid-solid-client/index.js", "solid-solid-client/index.js");
 
